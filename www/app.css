@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  background: #fff;
+  color: #424242;
+  font-family: Roboto, sans-serif;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-container .heading {
+  height: 48px;
+  min-height: 48px;
+  background: #89B0AE;
+  font-size: 28px;
+  line-height: 48px;
+  padding: 0 10px;
+  letter-spacing: 0.1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-container .main-panel {
+  flex-grow: 1;
+}
+
+.app-container .heading button,
+.app-container .heading h1 {
+  display: inline-block;
+  vertical-align: top;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  padding-right: 10px;
+  font-weight: normal;
+}
+
+.app-container .heading h1 {
+  flex-grow: 1;
+}
+
+.app-container .heading h1 input {
+  border: none;
+  background: none;
+  width: 100%;
+  color: #ecf0f1;
+}
+
+.app-container .heading button {
+  font-size: 18px;
+  width: 32px;
+  text-align: center;
+}
+
+.chat-list .item {
+  height: 64px;
+  border-bottom: 1px solid #ecf0f1;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.chat-list .new-chat {
+  line-height: 64px;
+  padding: 0 10px;
+}
+
+.chat-list .new-chat .chat-title {
+  color: #bdc3c7;
+}
+
+.chat-list .chat-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chat-list .output {
+  font-size: 14px;
+  color: #bdc3c7;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-panel .session-list {
+  flex-grow: 1;
+  border-bottom: 3px solid #89B0AE;
+}
+
+.chat-panel .message {
+  height: 48px;
+  min-height: 48px;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-panel .message input {
+  flex-grow: 1;
+  border: none;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 10px;
+}
+
+.chat-panel .message button {
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  color: #89B0AE;
+  text-align: center;
+}
+
+.session-list {
+  overflow-y: scroll;
+}
+
+.session-list li {
+  padding: 12px 20px;
+  width: 80%;
+  position: relative;
+  border-radius: 25px;
+  color: #7f8c8d;
+  clear: both;
+  min-height: 48px;
+  white-space: pre-wrap;
+}
+
+.session-list li::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  border: 15px solid #000;
+  border-color: transparent transparent transparent #000;
+  z-index: -1;
+}
+
+.session-list .input {
+  margin: 5px 25px 10px 2px;
+  background: #E0EDC5;
+  float: right;
+}
+
+.session-list .input::after {
+  border-color: transparent transparent transparent #E0EDC5;
+  right: -25px;
+}
+
+.session-list .output,
+.session-list .error,
+.session-list .debug {
+  float: left;
+  margin: 5px 2px 10px 25px;
+}
+
+.session-list .output::after,
+.session-list .error::after {
+  left: -23px;
+}
+
+.session-list .output {
+  background: #C0D6DF;
+}
+
+.session-list .output::after {
+  border-color: transparent  #C0D6DF transparent transparent;
+}
+
+.session-list .debug {
+  background: #FBFBFF;
+}
+
+.session-list .debug::after {
+  display: none;
+}
+
+.session-list .error {
+  background: #CDACA1;
+  color: #fff;
+}
+
+.session-list .error::after {
+  border-color: transparent #CDACA1 transparent transparent;
+}
+
