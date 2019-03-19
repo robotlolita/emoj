@@ -59,6 +59,7 @@ body {
 
 .app-container .main-panel {
   flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .app-container .heading button,
@@ -146,10 +147,6 @@ body {
   font-size: 28px;
   color: #89B0AE;
   text-align: center;
-}
-
-.session-list {
-  overflow-y: scroll;
 }
 
 .session-list li {
